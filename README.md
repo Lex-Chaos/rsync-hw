@@ -1,26 +1,12 @@
-# Домашняя работа к занятию «Disasters recovery и Keepalived» - Боровик А. А.
+# Домашняя работа к занятию «Резервное копирование» - Боровик А. А.
 
 ### Задание 1
 
 Ответ:
 
-Настройка роутера 1
+Результат выполнения команды:
 
-![Настройка роутера 1](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/img/Настройка_для_роутера_1.png)
-
-Результат настройки роутера 1
-
-![Результат настройки роутера 1](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/img/Результат_настройки_для_роутера_1.png)
-
-Настройка роутера 2
-
-![Настройка роутера 2](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/img/Настройка_для_роутера_2.png)
-
-Результат настройки роутера 2
-
-![Результат настройки роутера 2](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/img/Результат_настройки_для_роутера_2.png)
-
-[Ссылка на файл для CPT](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/files/hsrp_advanced_ready.pkt)
+![Результат выполнения команды](https://github.com/Lex-Chaos/rsync-hw/blob/main/img/Task1_rsync.png)
 
 ---
 
@@ -28,20 +14,15 @@
 
 Ответ:
 
-Скрипт проверки сервера Nginx:
-[Ссылка на файл скрипта](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/files/check_nginx.sh)
+[Скрипт резервного копирования](https://github.com/Lex-Chaos/rsync-hw/blob/main/files/Task2_regular_backup.sh)
 
-Конфигурационный файл keepalived:
-[Ссылка на конфигурационный файл](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/files/keepalived.conf)
+В cron сделана запись:
 
-Сервер работает без сбоев:
-![Работа без сбоев](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/img/Task2_Normal_working.png)
+`50 19 * * * bash $HOME/homeworks/rsync-hw/files/reg_sync.sh`
 
-Отсутствует файл index.html:
-![Отсутствует файл](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/img/Task2_Delete_index.png)
+Результат выполнения скрипта:
 
-Закрыт порт:
-![Работа без сбоев](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/img/Task2_Close_port.png)
+![Результат выполнения скрипта](https://github.com/Lex-Chaos/rsync-hw/blob/main/img/Task2_result.png)
 
 ---
 
@@ -49,18 +30,6 @@
 
 Ответ:
 
-Скрипт для определения коэффициента:
-[Ссылка на файл скрипта](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/files/Task3_balance_load.sh)
+Результат выполнения команды:
 
-Конфигурационный файл keepalived:
-[Ссылка на конфигурационный файл](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/files/Task3_keepalived.conf)
-
-Файлы для серверов отличаются только состоянием MASTER - BACKUP и приоритетом.
-Лог сервера 1:
-![Лог сервера 1](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/img/Task3_server1.png)
-
-Лог сервера 2:
-![Лог сервера 1](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/img/Task3_server2.png)
-
-Лог сервера 3:
-![Лог сервера 1](https://github.com/Lex-Chaos/disasters_recovery_and_keepalived-hw/blob/main/img/Task3_server3.png)
+![Результат выполнения команды](https://github.com/Lex-Chaos/rsync-hw/blob/main/img/Task3_rsync.png)
